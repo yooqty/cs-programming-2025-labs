@@ -9,3 +9,5 @@
 [2nd week](./timetable_2w.md)
 
 [3rd week](./timetable_3w.md)
+
+![Strawberry Wesker](./Strawberry-Wesker.png)
