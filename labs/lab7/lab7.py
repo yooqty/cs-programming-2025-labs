@@ -1,130 +1,139 @@
 #1
-# objects = [
-#     ("Containment Cell A", 4),
-#     ("Archive Vault", 1),
-#     ("Bio Lab Sector", 3),
-#     ("Observation Wing", 2)
-# ]
+objects = [
+    ("Containment Cell A", 4),
+    ("Archive Vault", 1),
+    ("Bio Lab Sector", 3),
+    ("Observation Wing", 2)
+]
 
-# sorted_objects = sorted(objects, key=lambda x: x[1])
+sorted_objects = sorted(objects, key=lambda x: x[1])
 
-# print(sorted_objects)
+print(sorted_objects)
+
 
 #2
-# staff_shifts = [
-#     {"name": "Dr. Shaw", "shift_cost": 120, "shifts": 15},
-#     {"name": "Agent Torres", "shift_cost": 90, "shifts": 22},
-#     {"name": "Researcher Hall", "shift_cost": 150, "shifts": 10}
-# ]
+staff_shifts = [
+    {"name": "Dr. Shaw", "shift_cost": 120, "shifts": 15},
+    {"name": "Agent Torres", "shift_cost": 90, "shifts": 22},
+    {"name": "Researcher Hall", "shift_cost": 150, "shifts": 10}
+]
 
-# total_costs = list(map(lambda x: {'name': x['name'], 'total_cost': x['shift_cost'] * x['shifts']}, staff_shifts))
+total_costs = list(map(lambda x: {'name': x['name'], 'total_cost': x['shift_cost'] * x['shifts']}, staff_shifts))
 
-# max_cost = max(total_costs, key=lambda x: x['total_cost'])
+max_cost = max(total_costs, key=lambda x: x['total_cost'])
 
-# print(total_costs)
-# print(max_cost)
+print(total_costs)
+print(max_cost)
+
 
 #3
-# personnel = [
-#     {"name": "Dr. Klein", "clearance": 2},
-#     {"name": "Agent Brooks", "clearance": 4},
-#     {"name": "Technician Reed", "clearance": 1}
-# ]
+personnel = [
+    {"name": "Dr. Klein", "clearance": 2},
+    {"name": "Agent Brooks", "clearance": 4},
+    {"name": "Technician Reed", "clearance": 1}
+]
 
-# with_category = list(map(lambda x: {'name': x['name'], 'clearance': x['clearance'], 'category': (
-#     'Restricted' if x['clearance'] == 1 else
-#     'Confidential' if 2 <= x['clearance'] <= 3 else
-#     'Top Secret')}, personnel))
+with_category = list(map(lambda x: {'name': x['name'], 'clearance': x['clearance'], 'category': (
+    'Restricted' if x['clearance'] == 1 else
+    'Confidential' if 2 <= x['clearance'] <= 3 else
+    'Top Secret')}, personnel))
 
-# print(with_category)
+print(with_category)
+
 
 #4
-# zones = [
-#     {"zone": "Sector-12", "active_from": 8, "active_to": 18},
-#     {"zone": "Deep Storage", "active_from": 0, "active_to": 24},
-#     {"zone": "Research Wing", "active_from": 9, "active_to": 17}
-# ]
+zones = [
+    {"zone": "Sector-12", "active_from": 8, "active_to": 18},
+    {"zone": "Deep Storage", "active_from": 0, "active_to": 24},
+    {"zone": "Research Wing", "active_from": 9, "active_to": 17}
+]
 
-# daytime_zones = list(filter(lambda x: x['active_from'] >= 8 and x['active_to'] <= 18, zones))
+daytime_zones = list(filter(lambda x: x['active_from'] >= 8 and x['active_to'] <= 18, zones))
 
-# print(daytime_zones)
+print(daytime_zones)
+
 
 #5
-# reports = [
-#     {"author": "Dr. Moss", "text": "Analysis completed. Reference: http://external-archive.net"},
-#     {"author": "Agent Lee", "text": "Incident resolved without escalation."},
-#     {"author": "Dr. Patel", "text": "Supplementary data available at https://secure-research.org"},
-#     {"author": "Supervisor Kane", "text": "No anomalies detected during inspection."},
-#     {"author": "Researcher Bloom", "text": "Extended observations uploaded to http://research-notes.lab"},
-#     {"author": "Agent Novak", "text": "Perimeter secured. No external interference observed."},
-#     {"author": "Dr. Hargreeve", "text": "Full containment log stored at https://internal-db.scp"},
-#     {"author": "Technician Moore", "text": "Routine maintenance completed successfully."},
-#     {"author": "Dr. Alvarez", "text": "Cross-reference materials: http://crosslink.foundation"},
-#     {"author": "Security Officer Tan", "text": "Shift completed without incidents."},
-#     {"author": "Analyst Wright", "text": "Statistical model published at https://analysis-hub.org"},
-#     {"author": "Dr. Kowalski", "text": "Behavioral deviations documented internally."},
-#     {"author": "Agent Fischer", "text": "Additional footage archived: http://video-storage.sec"},
-#     {"author": "Senior Researcher Hall", "text": "All test results verified and approved."},
-#     {"author": "Operations Lead Grant", "text": "Emergency protocol draft shared via https://ops-share.scp"}
-# ]
+reports = [
+    {"author": "Dr. Moss", "text": "Analysis completed. Reference: http://external-archive.net"},
+    {"author": "Agent Lee", "text": "Incident resolved without escalation."},
+    {"author": "Dr. Patel", "text": "Supplementary data available at https://secure-research.org"},
+    {"author": "Supervisor Kane", "text": "No anomalies detected during inspection."},
+    {"author": "Researcher Bloom", "text": "Extended observations uploaded to http://research-notes.lab"},
+    {"author": "Agent Novak", "text": "Perimeter secured. No external interference observed."},
+    {"author": "Dr. Hargreeve", "text": "Full containment log stored at https://internal-db.scp"},
+    {"author": "Technician Moore", "text": "Routine maintenance completed successfully."},
+    {"author": "Dr. Alvarez", "text": "Cross-reference materials: http://crosslink.foundation"},
+    {"author": "Security Officer Tan", "text": "Shift completed without incidents."},
+    {"author": "Analyst Wright", "text": "Statistical model published at https://analysis-hub.org"},
+    {"author": "Dr. Kowalski", "text": "Behavioral deviations documented internally."},
+    {"author": "Agent Fischer", "text": "Additional footage archived: http://video-storage.sec"},
+    {"author": "Senior Researcher Hall", "text": "All test results verified and approved."},
+    {"author": "Operations Lead Grant", "text": "Emergency protocol draft shared via https://ops-share.scp"}
+]
 
-# with_links = list(filter(lambda x: 'http://' in x['text'] or 'https://' in x['text'], reports))
+with_links = list(filter(lambda x: 'http://' in x['text'] or 'https://' in x['text'], reports))
 
-# print(with_links)
+print(with_links)
 
-# import re
+import re
 
-# cleaned = list(map(lambda x: {'author': x['author'], 'text': re.sub(r'https?://[^\s]+', '[ДАННЫЕ УДАЛЕНЫ]', x['text'])}, with_links))
+cleaned = list(map(lambda x: {'author': x['author'], 'text': re.sub(r'https?://[^\s]+', '[ДАННЫЕ УДАЛЕНЫ]', x['text'])}, with_links))
 
-# print(cleaned)
+print(cleaned)
+
 
 #6
-# scp_objects = [
-#     {"scp": "SCP-096", "class": "Euclid"},
-#     {"scp": "SCP-173", "class": "Euclid"},
-#     {"scp": "SCP-055", "class": "Keter"},
-#     {"scp": "SCP-999", "class": "Safe"},
-#     {"scp": "SCP-3001", "class": "Keter"}
-# ]
+scp_objects = [
+    {"scp": "SCP-096", "class": "Euclid"},
+    {"scp": "SCP-173", "class": "Euclid"},
+    {"scp": "SCP-055", "class": "Keter"},
+    {"scp": "SCP-999", "class": "Safe"},
+    {"scp": "SCP-3001", "class": "Keter"}
+]
 
-# enhanced = list(filter(lambda x: x['class'] != 'Safe', scp_objects))
+enhanced = list(filter(lambda x: x['class'] != 'Safe', scp_objects))
 
-# print(enhanced)
+print(enhanced)
+
 
 #7
-# incidents = [
-#     {"id": 101, "staff": 4},
-#     {"id": 102, "staff": 12},
-#     {"id": 103, "staff": 7},
-#     {"id": 104, "staff": 20}
-# ]
+incidents = [
+    {"id": 101, "staff": 4},
+    {"id": 102, "staff": 12},
+    {"id": 103, "staff": 7},
+    {"id": 104, "staff": 20}
+]
 
-# sorted_incidents = sorted(incidents, key=lambda x: x['staff'], reverse=True)
+sorted_incidents = sorted(incidents, key=lambda x: x['staff'], reverse=True)
 
-# print(sorted_incidents)
+print(sorted_incidents)
 
-# top3 = sorted_incidents[:3]
+top3 = sorted_incidents[:3]
 
-# print(top3)
+print(top3)
+
 
 #8
-# protocols = [
-#     ("Lockdown", 5),
-#     ("Evacuation", 4),
-#     ("Data Wipe", 3),
-#     ("Routine Scan", 1)
-# ]
+protocols = [
+    ("Lockdown", 5),
+    ("Evacuation", 4),
+    ("Data Wipe", 3),
+    ("Routine Scan", 1)
+]
 
-# new = list(map(lambda x: f'Protocol {x[0]} - Criticality {x[1]}', protocols))
+new = list(map(lambda x: f'Protocol {x[0]} - Criticality {x[1]}', protocols))
 
-# print(new)
+print(new)
+
 
 #9
-# shifts = [6, 12, 8, 24, 10, 4]
+shifts = [6, 12, 8, 24, 10, 4]
 
-# shi = list(filter(lambda x: 8 <= x <= 12, shifts))
+shi = list(filter(lambda x: 8 <= x <= 12, shifts))
 
-# print(shi)
+print(shi)
+
 
 #10
 evaluations = [
