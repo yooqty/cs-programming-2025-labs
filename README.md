@@ -1,1 +1,1 @@
-описание моего репозитория :)
+computer science labs =3
